@@ -1,0 +1,87 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+
+/* Custom card style on top of Bootstrap */
+.dark-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+/* Table row colors per protocol */
+.row-tcp   { background-color: rgba(0, 255, 136, 0.05) !important; }
+.row-udp   { background-color: rgba(255, 170, 0,  0.05) !important; }
+.row-icmp  { background-color: rgba(255, 68, 102, 0.05) !important; }
+.row-arp   { background-color: rgba(168, 85, 247, 0.05) !important; }
+
+/* Protocol badges */
+.badge-tcp   { background-color: #00ff88; color: #000; }
+.badge-udp   { background-color: #ffaa00; color: #000; }
+.badge-icmp  { background-color: #ff4466; color: #fff; }
+.badge-arp   { background-color: #a855f7; color: #fff; }
+.badge-other { background-color: #00d4ff; color: #000; }
+
+/* Status dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.active {
+  background-color: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  animation: blink 1.2s infinite;
+}
+
+.status-dot.idle {
+  background-color: #64748b;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* Scrollable table */
+.table-scroll {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* Dark table override */
+.table-dark-custom {
+  color: #e2e8f0;
+}
+
+.table-dark-custom th {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-color: #334155;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-dark-custom td {
+  border-color: #1e293b;
+  vertical-align: middle;
+}
+
+.table-dark-custom tbody tr:hover {
+  background-color: rgba(255,255,255,0.04) !important;
+}
